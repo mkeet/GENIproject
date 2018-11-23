@@ -12,26 +12,47 @@ HOW TO USE IT
 
 with the colourful user interface:
 in the terminal, go to the relevant directory, like 
+
 /Users/joannsoap/PythonProjects/OntologyVerbaliser_Zu-UI/example
+
 (wherever you have downlaoded the directory) then type
+
 python start.py
+
 or, of you have several installations, then pick:
+
 python3.4 start.py
+
 with that, then enter as path and as URI, for the test ontology, the following (following on from the previous): 
+
 /Users/joannsoap/PythonProjects/OntologyVerbaliser_Zu-UI/example
+
 and 
+
 http://www.semanticweb.org/mariakeet/ontologies/2016/10/testOntoisiZuluWithPW.owl
+
 the gui will pop up
+
 
 without UI:
 in the terminal, go to the relevant directory, like 
+
 /Users/joannsoap/PythonProjects/OntologyVerbaliser_Zu/example
+
 (wherever you have downlaoded the directory) then type
+
 python start.py -ui=False
+
 or, of you have several installations, then pick:
+
 python3.4 start.py -ui=False
+
 then, enter at the successive prompts, for the test ontology, the following: 
+
 /Users/joannsoap/PythonProjects/OntologyVerbaliser_Zu/example
+
 and 
+
 http://www.semanticweb.org/mariakeet/ontologies/2016/10/testOntoisiZuluWithPW.owl
-the output is printed to teh terminal
+
+the output is printed to the terminal
