@@ -1,0 +1,462 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2016/5/untitled-ontology-52"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/user/ontologies/2016/5/untitled-ontology-52">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This is the African Wildlife ontology made with the Zulu language.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#iapula"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#iberry"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ibhubesi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#igatsha"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ihebhivo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ikanivo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#impala"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#indlovu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#indlulamithi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ingola"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ingulube"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ingxenye-sesitshalo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#iominivo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ipalm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#iqabunga"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#isihlahla"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#isilwane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#isitshalo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#isitshalo-okumnandi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#izithelo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#umqokolo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#utshani"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dla"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dliwa"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ingxenye"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#onesabelo"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#ihebhivo"/>
+        <ObjectUnionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#dla"/>
+                <Class IRI="#isitshalo"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#dla"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#ingxenye"/>
+                    <Class IRI="#isitshalo"/>
+                </ObjectSomeValuesFrom>
+            </ObjectAllValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ikanivo"/>
+        <ObjectUnionOf>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#dla"/>
+                <Class IRI="#isilwane"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#dla"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#ingxenye"/>
+                    <Class IRI="#isilwane"/>
+                </ObjectSomeValuesFrom>
+            </ObjectAllValuesFrom>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#iominivo"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#dla"/>
+                <Class IRI="#isilwane"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#dla"/>
+                <Class IRI="#isitshalo"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#dla"/>
+                <ObjectUnionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#ingxenye"/>
+                        <Class IRI="#isilwane"/>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="#ingxenye"/>
+                        <Class IRI="#isitshalo"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#iapula"/>
+        <Class IRI="#izithelo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#iberry"/>
+        <Class IRI="#izithelo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ibhubesi"/>
+        <Class IRI="#isilwane"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ibhubesi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#dla"/>
+            <Class IRI="#impala"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ibhubesi"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#dla"/>
+            <Class IRI="#ihebhivo"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#igatsha"/>
+        <Class IRI="#ingxenye-sesitshalo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#igatsha"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ingxenye"/>
+            <Class IRI="#isihlahla"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ihebhivo"/>
+        <Class IRI="#isilwane"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ikanivo"/>
+        <Class IRI="#isilwane"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#impala"/>
+        <Class IRI="#isilwane"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#indlovu"/>
+        <Class IRI="#ihebhivo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#indlulamithi"/>
+        <Class IRI="#isilwane"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#indlulamithi"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#dla"/>
+            <Class IRI="#iqabunga"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ingola"/>
+        <Class IRI="#isilwane"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ingola"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#dla"/>
+            <Class IRI="#isitshalo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ingulube"/>
+        <Class IRI="#isilwane"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ingulube"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#dla"/>
+                <Class IRI="#isilwane"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#dla"/>
+                <Class IRI="#izithelo"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#dla"/>
+                <Class IRI="#utshani"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ingxenye-sesitshalo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ingxenye"/>
+            <Class IRI="#isitshalo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#iominivo"/>
+        <Class IRI="#isilwane"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ipalm"/>
+        <Class IRI="#isitshalo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ipalm"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#onesabelo"/>
+            <ObjectComplementOf>
+                <Class IRI="#igatsha"/>
+            </ObjectComplementOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#iqabunga"/>
+        <Class IRI="#ingxenye-sesitshalo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#iqabunga"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#dla"/>
+            <Class IRI="#ingulube"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#iqabunga"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ingxenye"/>
+            <Class IRI="#igatsha"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#isihlahla"/>
+        <Class IRI="#isitshalo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#isitshalo-okumnandi"/>
+        <Class IRI="#isitshalo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#isitshalo-okumnandi"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#dliwa"/>
+                <Class IRI="#ihebhivo"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#dliwa"/>
+                <Class IRI="#ikanivo"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#izithelo"/>
+        <Class IRI="#ingxenye-sesitshalo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#umqokolo"/>
+        <Class IRI="#isitshalo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#utshani"/>
+        <Class IRI="#isitshalo"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#isilwane"/>
+        <Class IRI="#isitshalo"/>
+    </DisjointClasses>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#dliwa"/>
+        <ObjectProperty IRI="#dla"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#dla"/>
+        <Class IRI="#isilwane"/>
+    </ObjectPropertyDomain>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#dla</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">eats</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#dliwa</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">eaten by</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#iapula</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">apple fruit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#iberry</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">berry fruit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ibhubesi</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Lion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#igatsha</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Branch of a tree</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ihebhivo</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">herbivore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ikanivo</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">carnivore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#indlulamithi</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Giraffe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ingola</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">mole rat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ingulube</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">warthog</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ingxenye-sesitshalo</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">part of the plant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#iominivo</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">omnivore</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ipalm</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">palm tree</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#iqabunga</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">leaf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isihlahla</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Tree</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isilwane</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">animal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#isitshalo</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Plant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#izithelo</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">fruit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#onesabelo</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">has part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#umqokolo</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Kei Apple Tree</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#utshani</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">grass</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

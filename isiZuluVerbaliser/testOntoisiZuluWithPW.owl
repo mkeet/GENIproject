@@ -1,0 +1,867 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl">
+    <Prefix name="" IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">this is very much a test ontology and contains mostly just those axioms that were used in several papers (CNL14, RuleML14, LRE16, INLG16)</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ingwe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#aaaa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#inja"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#i-apula"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ibhotela"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ugogo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#udokotela"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#dddd"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isiqephu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umshobingo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umfoloko"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isithelo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukubhukuda"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#uketshezi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indlulamithi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umqondo_womshini"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukugwinya"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umfazi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#iNgqungquthela"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#fundisa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isidlanyama"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ifoni"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umfula"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#inkawu"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ingxenye"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#yawufeza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umfundi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ithiyetha_yokuhlinzela"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#imvilophu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indebe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umbala"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#eeee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indilinga_yokudla"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ubabekazi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umunxa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umsebenzi_onqunyiwe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#phuza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukhetho"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ikhanivo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#iziko"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#dla"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isinkwa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ubumba"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ihebhivo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#inhliziyo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umdlalo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukukhota_ukhilimu_oyiqhwa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#UMphathi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#uSolwazi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#feza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#itshe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ihebhu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukuhlala"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#impala"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umuntu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ikhambi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isifundo_sezibalo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isisu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umalume"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#inyama"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isihlalo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umfundi_ongenaziqu"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ffff"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indoda"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indlu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ufulawa"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#enza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umakhalekhukhwini"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#iphilisi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isidlazitshalo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#hlanganyele"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isifundo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isitashi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#uMnumzana"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ushizi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#igazi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukudla"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umsebenzi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#akhiwe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#fundiswa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#incwadi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#iqembu_labahlinzi"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#bbbb"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#amanzi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ihlamvana"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ingilazi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#i-okhestra"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ikhompyutha"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#itafula"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#okubomvu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isampula_igazi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umfino"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ibhubesi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umuthi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isazi_somnyuziki"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umjondolo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ixhiba"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isihlahla"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukuhlinza"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indlovu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukugijima"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isilwane"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukusebenza"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#cccc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukhilimu_oyiqhwa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ucezu_isinkwa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umphakathi"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isipunu"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#enziwe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isibhedlela"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umsele"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ivazi"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#UMphathi"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umsebenzi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#amanzi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ingxenye"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umshobingo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#i-okhestra"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#aaaa"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isazi_somnyuziki"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#iNgqungquthela"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#aaaa"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#uMnumzana"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ibhubesi"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isilwane"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ibhubesi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#dla"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#impala"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#igazi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#eeee"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isampula_igazi"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ihebhu"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umuthi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ikhambi"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umuthi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ikhompyutha"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#aaaa"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umqondo_womshini"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#impala"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isilwane"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#imvilophu"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#aaaa"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#incwadi"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#incwadi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ffff"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#imvilophu"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indilinga_yokudla"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ffff"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isisu"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indlovu"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isilwane"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indlovu"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#dla"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ihlamvana"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indlu"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#akhiwe"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#itshe"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indlulamithi"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isilwane"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indlulamithi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#dla"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ihlamvana"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ingwe"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isilwane"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ingwe"/>
+        <ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#dla"/>
+                <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#i-apula"/>
+            </ObjectSomeValuesFrom>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#inhliziyo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ingxenye"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umuntu"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#inja"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isilwane"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#inkawu"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isilwane"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#inkawu"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#dla"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isithelo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#iphilisi"/>
+        <ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#enziwe"/>
+                <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umshobingo"/>
+            </ObjectSomeValuesFrom>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#iphilisi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#enziwe"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isitashi"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#iqembu_labahlinzi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#aaaa"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#udokotela"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#iqembu_labahlinzi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#hlanganyele"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukuhlinza"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isampula_igazi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isiqephu"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#igazi"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isazi_somnyuziki"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ingxenye"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#i-okhestra"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isibhedlela"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#dddd"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ithiyetha_yokuhlinzela"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isifundo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#fundiswa"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#uSolwazi"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isifundo_sezibalo"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isifundo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isihlahla"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umuthi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isinkwa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#cccc"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ufulawa"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isinkwa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#eeee"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ucezu_isinkwa"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isisu"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#aaaa"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indilinga_yokudla"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ithiyetha_yokuhlinzela"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umunxa"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isibhedlela"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ivazi"/>
+        <ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#akhiwe"/>
+                <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#amanzi"/>
+            </ObjectSomeValuesFrom>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ivazi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#akhiwe"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ubumba"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ixhiba"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#dddd"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#iziko"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#iziko"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umunxa"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ixhiba"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#okubomvu"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umbala"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#uMnumzana"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ingxenye"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#iNgqungquthela"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#uSolwazi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#fundisa"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isifundo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ucezu_isinkwa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isiqephu"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isinkwa"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#udokotela"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ingxenye"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukuhlinza"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ufulawa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ingxenye"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isinkwa"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ugogo"/>
+        <ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#dla"/>
+                <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#i-apula"/>
+            </ObjectSomeValuesFrom>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukhetho"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#bbbb"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umphakathi"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukhilimu_oyiqhwa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#eeee"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukukhota_ukhilimu_oyiqhwa"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukubhukuda"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umdlalo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukudla"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#aaaa"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukugwinya"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukugwinya"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ingxenye"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukudla"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukuhlinza"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#aaaa"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#udokotela"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukuhlinza"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#bbbb"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#iqembu_labahlinzi"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukukhota_ukhilimu_oyiqhwa"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isiqephu"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukhilimu_oyiqhwa"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukusebenza"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#yawufeza"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umsebenzi_onqunyiwe"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umakhalekhukhwini"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ifoni"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umfundi_ongenaziqu"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umfundi"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umfundi_ongenaziqu"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#enza"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isifundo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umphakathi"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#hlanganyele"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukhetho"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umqondo_womshini"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ffff"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ikhompyutha"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umshobingo"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#cccc"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#amanzi"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umuntu"/>
+        <ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#feza"/>
+                <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umsebenzi_onqunyiwe"/>
+            </ObjectSomeValuesFrom>
+        </ObjectComplementOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umuntu"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#aaaa"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#inhliziyo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umuntu"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#dla"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isithelo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umuntu"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#phuza"/>
+            <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#uketshezi"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ibhotela"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ushizi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ibhubesi"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indlovu"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ihebhivo"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ikhanivo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indebe"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ingilazi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indlu"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umjondolo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#indoda"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umfazi"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#inyama"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umfino"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isidlanyama"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isidlazitshalo"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isihlalo"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#itafula"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#isipunu"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umfoloko"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ubabekazi"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umalume"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukugijima"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ukuhlala"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umfula"/>
+        <Class IRI="http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#umsele"/>
+    </DisjointClasses>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#amanzi</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">with pw_s!</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://www.meteck.org/files/ontologies/isiZulutestontologyPW.owl#ufulawa</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">with pw_s!</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+

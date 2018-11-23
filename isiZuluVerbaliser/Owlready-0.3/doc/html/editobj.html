@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Editing Instances with EditObj3 dialog box generator &#8212; Owlready 0.3 documentation</title>
+    
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="Owlready 0.3 documentation" href="index.html" />
+    <link rel="next" title="Limitations" href="limitations.html" />
+    <link rel="prev" title="Keys and indexes" href="keys_and_indexes.html" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="limitations.html" title="Limitations"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="keys_and_indexes.html" title="Keys and indexes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Owlready 0.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="editing-instances-with-editobj3-dialog-box-generator">
+<h1>Editing Instances with EditObj3 dialog box generator<a class="headerlink" href="#editing-instances-with-editobj3-dialog-box-generator" title="Permalink to this headline">¶</a></h1>
+<p>The Protégé editor can be used for editing ontology&#8217;s Classes and Properties, however the 4.x version
+of Protégé is very poor for editing Instances. There come EditObj3 and Owlready!</p>
+<p><a class="reference external" href="https://bitbucket.org/jibalamy/editobj3">Editobj3</a> is a dialog box generator for Python objects.
+EditObj3 can uses the Qt toolkit, but can also be used as a web-server to generate HTML pages
+for web browsers.</p>
+<p>Owlready can use EditObj3 and set it up automatically to edit ontology&#8217;s Instances.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Edition is still an experimental feature!</p>
+</div>
+<div class="section" id="generating-a-dialog-box">
+<h2>Generating a dialog box<a class="headerlink" href="#generating-a-dialog-box" title="Permalink to this headline">¶</a></h2>
+<p>First we create an ontology with Drug, DrugForm and Active Principle, and various Properties:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">owlready</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">onto</span> <span class="o">=</span> <span class="n">Ontology</span><span class="p">(</span><span class="s2">&quot;http://test.org/onto.owl&quot;</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Drug</span><span class="p">(</span><span class="n">GeneratedName</span><span class="p">,</span> <span class="n">Thing</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">generate_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s2">&quot;drug_cip:</span><span class="si">%s</span><span class="s2">_with_</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cip</span><span class="p">,</span> <span class="s2">&quot;_and_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">ai</span><span class="o">.</span><span class="n">inn</span> <span class="k">for</span> <span class="n">ai</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">active_principles</span><span class="p">)))</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">ActivePrinciple</span><span class="p">(</span><span class="n">GeneratedName</span><span class="p">,</span> <span class="n">Thing</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">generate_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s2">&quot;active_principle_</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="bp">self</span><span class="o">.</span><span class="n">inn</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">DrugForm</span><span class="p">(</span><span class="n">Thing</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tablet</span>     <span class="o">=</span> <span class="n">DrugForm</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">capsule</span>    <span class="o">=</span> <span class="n">DrugForm</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">injectable</span> <span class="o">=</span> <span class="n">DrugForm</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pomade</span>     <span class="o">=</span> <span class="n">DrugForm</span><span class="p">()</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">has_for_cip</span><span class="p">(</span><span class="n">FunctionalProperty</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="n">domain</span>   <span class="o">=</span> <span class="p">[</span><span class="n">Drug</span><span class="p">]</span>
+<span class="gp">... </span>    <span class="nb">range</span>    <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ANNOTATIONS</span><span class="p">[</span><span class="n">has_for_cip</span><span class="p">][</span><span class="s2">&quot;python_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;cip&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">has_for_active_principle</span><span class="p">(</span><span class="n">Property</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="n">domain</span>   <span class="o">=</span> <span class="p">[</span><span class="n">Drug</span><span class="p">]</span>
+<span class="gp">... </span>    <span class="nb">range</span>    <span class="o">=</span> <span class="p">[</span><span class="n">ActivePrinciple</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ANNOTATIONS</span><span class="p">[</span><span class="n">has_for_active_principle</span><span class="p">][</span><span class="s2">&quot;python_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;active_principles&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">has_for_form</span><span class="p">(</span><span class="n">FunctionalProperty</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="n">domain</span>   <span class="o">=</span> <span class="p">[</span><span class="n">Drug</span><span class="p">]</span>
+<span class="gp">... </span>    <span class="nb">range</span>    <span class="o">=</span> <span class="p">[</span><span class="n">DrugForm</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ANNOTATIONS</span><span class="p">[</span><span class="n">has_for_form</span><span class="p">][</span><span class="s2">&quot;python_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;form&quot;</span>
+
+<span class="go"># INN means &#39;international nonproprietary name&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">has_for_inn</span><span class="p">(</span><span class="n">FunctionalProperty</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="n">domain</span>   <span class="o">=</span> <span class="p">[</span><span class="n">ActivePrinciple</span><span class="p">]</span>
+<span class="gp">... </span>    <span class="nb">range</span>    <span class="o">=</span> <span class="p">[</span><span class="n">normstr</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ANNOTATIONS</span><span class="p">[</span><span class="n">has_for_inn</span><span class="p">][</span><span class="s2">&quot;python_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;inn&quot;</span>
+
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">acetaminophen</span>   <span class="o">=</span> <span class="n">ActivePrinciple</span><span class="p">(</span><span class="n">inn</span> <span class="o">=</span> <span class="s2">&quot;acetaminophen&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">amoxicillin</span>     <span class="o">=</span> <span class="n">ActivePrinciple</span><span class="p">(</span><span class="n">inn</span> <span class="o">=</span> <span class="s2">&quot;amoxicillin&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clavulanic_acid</span> <span class="o">=</span> <span class="n">ActivePrinciple</span><span class="p">(</span><span class="n">inn</span> <span class="o">=</span> <span class="s2">&quot;clavulanic_acid&quot;</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drug1</span> <span class="o">=</span> <span class="n">Drug</span><span class="p">(</span><span class="n">cip</span> <span class="o">=</span> <span class="mi">1234</span><span class="p">,</span> <span class="n">active_principles</span> <span class="o">=</span> <span class="p">[</span><span class="n">acetaminophen</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drug2</span> <span class="o">=</span> <span class="n">Drug</span><span class="p">(</span><span class="n">cip</span> <span class="o">=</span> <span class="mi">1235</span><span class="p">,</span> <span class="n">active_principles</span> <span class="o">=</span> <span class="p">[</span><span class="n">amoxicillin</span><span class="p">,</span> <span class="n">clavulanic_acid</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drug3</span> <span class="o">=</span> <span class="n">Drug</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Now, import the ontology editor, configure it from the available ontologies, activate the Qt backend, and edit
+the Instances of two Classes (Drug and Active Principle):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">editobj3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">owlready.editor</span> <span class="k">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">owlready.instance_editor</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ontology</span> <span class="ow">in</span> <span class="n">onto</span><span class="o">.</span><span class="n">indirectly_imported_ontologies</span><span class="p">():</span> <span class="n">configure_editobj_from_ontology</span><span class="p">(</span><span class="n">ontology</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">editobj3</span><span class="o">.</span><span class="n">GUI</span> <span class="o">=</span> <span class="s2">&quot;Qt&quot;</span> <span class="c1"># &quot;Qt&quot; or &quot;HTML&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">editobj3</span><span class="o">.</span><span class="n">GUI</span> <span class="o">==</span> <span class="s2">&quot;Qt&quot;</span><span class="p">:</span> <span class="c1"># Required by Qt</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">PyQt5.QtWidgets</span> <span class="k">as</span> <span class="nn">qtwidgets</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="k">if</span> <span class="n">qtwidgets</span><span class="o">.</span><span class="n">QApplication</span><span class="o">.</span><span class="n">startingUp</span><span class="p">():</span> <span class="n">qtwidgets</span><span class="o">.</span><span class="n">app</span> <span class="o">=</span> <span class="n">qtwidgets</span><span class="o">.</span><span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">editor</span> <span class="o">=</span> <span class="n">OntologyInstanceEditor</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">editor</span><span class="o">.</span><span class="n">set_ontology</span><span class="p">(</span><span class="n">onto</span><span class="p">,</span> <span class="n">edited_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">ActivePrinciple</span><span class="p">,</span> <span class="n">Drug</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">editor</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="figure">
+<img alt="_images/editobj_instance_editor.png" src="_images/editobj_instance_editor.png" />
+</div>
+<p>Notice how Owlready and EditObj take into account the various information available in the ontology
+for building the dialog box!</p>
+</div>
+<div class="section" id="ordering-the-instance-s-properties">
+<h2>Ordering the Instance&#8217;s Properties<a class="headerlink" href="#ordering-the-instance-s-properties" title="Permalink to this headline">¶</a></h2>
+<p>Almost all the information needed for generating a dialog box is available in an OWL ontology.
+One of the most notable missing information is the order of the Property: in which order should
+the fields be displayed?</p>
+<p>To specify an order of priority between Properties, you can use the &#8216;editobj_priority&#8217; annotation (from the
+&#8216;owlready_ontology.owl&#8217;). In the following example, the CIP code is shown first, then active principles, and
+finally Drug form.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ANNOTATIONS</span><span class="p">[</span><span class="n">has_for_cip</span>             <span class="p">][</span><span class="s2">&quot;editobj_priority&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ANNOTATIONS</span><span class="p">[</span><span class="n">has_for_active_principle</span><span class="p">][</span><span class="s2">&quot;editobj_priority&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ANNOTATIONS</span><span class="p">[</span><span class="n">has_for_form</span>            <span class="p">][</span><span class="s2">&quot;editobj_priority&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span>
+</pre></div>
+</div>
+<p>This annotation can of course be set in editor like Protégé.</p>
+</div>
+<div class="section" id="html-output">
+<h2>HTML output<a class="headerlink" href="#html-output" title="Permalink to this headline">¶</a></h2>
+<p>EditObj 3 can also generate HTML pages in a web browser.
+Use the following parameters for HTML:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">editobj3</span><span class="o">.</span><span class="n">GUI</span> <span class="o">=</span> <span class="s2">&quot;HTML&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Editing Instances with EditObj3 dialog box generator</a><ul>
+<li><a class="reference internal" href="#generating-a-dialog-box">Generating a dialog box</a></li>
+<li><a class="reference internal" href="#ordering-the-instance-s-properties">Ordering the Instance&#8217;s Properties</a></li>
+<li><a class="reference internal" href="#html-output">HTML output</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="keys_and_indexes.html"
+                        title="previous chapter">Keys and indexes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="limitations.html"
+                        title="next chapter">Limitations</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="limitations.html" title="Limitations"
+             >next</a></li>
+        <li class="right" >
+          <a href="keys_and_indexes.html" title="Keys and indexes"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Owlready 0.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2015, Jean-Baptiste LAMY.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
+  </body>
+</html>

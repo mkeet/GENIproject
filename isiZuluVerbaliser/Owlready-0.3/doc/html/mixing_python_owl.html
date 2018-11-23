@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Mixing Python and OWL &#8212; Owlready 0.3 documentation</title>
+    
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="Owlready 0.3 documentation" href="index.html" />
+    <link rel="next" title="Reasoning" href="reasoning.html" />
+    <link rel="prev" title="Disjointness and open world assumption" href="disjoint.html" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reasoning.html" title="Reasoning"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="disjoint.html" title="Disjointness and open world assumption"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Owlready 0.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="mixing-python-and-owl">
+<h1>Mixing Python and OWL<a class="headerlink" href="#mixing-python-and-owl" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="adding-python-methods-to-an-owl-class">
+<h2>Adding Python methods to an OWL Class<a class="headerlink" href="#adding-python-methods-to-an-owl-class" title="Permalink to this headline">¶</a></h2>
+<p>Python methods can be defined in ontology Classes as usual in Python. In the example below, the Drug Class
+has a Python method for computing the per-tablet cost of a Drug, using two OWL Properties (which have been
+renamed in Python, see <a class="reference internal" href="properties.html#associating-python-alias-name-to-properties"><span class="std std-ref">Associating Python alias name to Properties</span></a>):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">owlready</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">onto</span> <span class="o">=</span> <span class="n">Ontology</span><span class="p">(</span><span class="s2">&quot;http://test.org/onto.owl&quot;</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Drug</span><span class="p">(</span><span class="n">Thing</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">get_per_tablet_cost</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cost</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">number_of_tablets</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">has_for_cost</span><span class="p">(</span><span class="n">FunctionalProperty</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="n">domain</span>   <span class="o">=</span> <span class="p">[</span><span class="n">Drug</span><span class="p">]</span>
+<span class="gp">... </span>    <span class="nb">range</span>    <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ANNOTATIONS</span><span class="p">[</span><span class="n">has_for_cost</span><span class="p">][</span><span class="s2">&quot;python_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;cost&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">has_for_number_of_tablets</span><span class="p">(</span><span class="n">FunctionalProperty</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="n">domain</span>   <span class="o">=</span> <span class="p">[</span><span class="n">Drug</span><span class="p">]</span>
+<span class="gp">... </span>    <span class="nb">range</span>    <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ANNOTATIONS</span><span class="p">[</span><span class="n">has_for_number_of_tablets</span><span class="p">][</span><span class="s2">&quot;python_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;number_of_tablets&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_drug</span> <span class="o">=</span> <span class="n">Drug</span><span class="p">(</span><span class="s2">&quot;my_drug&quot;</span><span class="p">,</span> <span class="n">cost</span> <span class="o">=</span> <span class="mf">10.0</span><span class="p">,</span> <span class="n">number_of_tablets</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">my_drug</span><span class="o">.</span><span class="n">get_per_tablet_cost</span><span class="p">())</span>
+<span class="go">2.0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="generating-instance-names">
+<h2>Generating Instance names<a class="headerlink" href="#generating-instance-names" title="Permalink to this headline">¶</a></h2>
+<p>The Instances OWL name (or identifier) can also be generated in Python, from the relations of the Instance.
+The Class must inherit from the special Class GeneratedName, and it must have a .generate_name() method.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Drug</span><span class="p">(</span><span class="n">GeneratedName</span><span class="p">,</span> <span class="n">Thing</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">generate_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s2">&quot;drug_with_</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="s2">&quot;_and_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">ai</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">ai</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">active_principles</span><span class="p">))</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">ActivePrinciple</span><span class="p">(</span><span class="n">Thing</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">has_for_active_principle</span><span class="p">(</span><span class="n">Property</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="n">domain</span>   <span class="o">=</span> <span class="p">[</span><span class="n">Drug</span><span class="p">]</span>
+<span class="gp">... </span>    <span class="nb">range</span>    <span class="o">=</span> <span class="p">[</span><span class="n">ActivePrinciple</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ANNOTATIONS</span><span class="p">[</span><span class="n">has_for_active_principle</span><span class="p">][</span><span class="s2">&quot;python_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;active_principles&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">amoxicillin</span>     <span class="o">=</span> <span class="n">ActivePrinciple</span><span class="p">(</span><span class="s2">&quot;amoxicillin&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clavulanic_acid</span> <span class="o">=</span> <span class="n">ActivePrinciple</span><span class="p">(</span><span class="s2">&quot;clavulanic_acid&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_drug</span>       <span class="o">=</span> <span class="n">Drug</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_drug</span><span class="o">.</span><span class="n">active_principles</span> <span class="o">=</span> <span class="p">[</span><span class="n">amoxicillin</span><span class="p">,</span> <span class="n">clavulanic_acid</span><span class="p">]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">my_drug</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="go">drug_with_amoxicillin_and_clavulanic_acid</span>
+</pre></div>
+</div>
+<p>Notice the use of sorted() when generating the name: it is often a good idea to have constant
+and order-independent names.</p>
+<p>Owlready garenteers the uniqueness of the generated names, and will add &#8220;_2&#8221;, &#8220;_3&#8221;, and so on if needed.</p>
+</div>
+<div class="section" id="forward-declarations">
+<h2>Forward declarations<a class="headerlink" href="#forward-declarations" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes, you may need to forward-declare a Class or a relation.
+This can be done with the &#64;forward_declaration decorator:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nd">@forward_declaration</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">has_for_active_principle</span><span class="p">(</span><span class="n">Property</span><span class="p">):</span> <span class="k">pass</span>
+
+<span class="go"># This definition of drug exclude Placebo, and requires the has_for_active_principle Property</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Drug</span><span class="p">(</span><span class="n">Thing</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="n">is_a</span> <span class="o">=</span> <span class="p">[</span><span class="n">has_for_active_principle</span><span class="p">(</span><span class="n">SOME</span><span class="p">,</span> <span class="n">ActivePrinciple</span><span class="p">)]</span>
+
+<span class="go"># This is the final declaration of the Property</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">has_for_active_principle</span><span class="p">(</span><span class="n">Property</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="n">domain</span>   <span class="o">=</span> <span class="p">[</span><span class="n">Drug</span><span class="p">]</span>
+<span class="gp">... </span>    <span class="nb">range</span>    <span class="o">=</span> <span class="p">[</span><span class="n">ActivePrinciple</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="associating-a-python-module-to-an-owl-ontology">
+<h2>Associating a Python module to an OWL ontology<a class="headerlink" href="#associating-a-python-module-to-an-owl-ontology" title="Permalink to this headline">¶</a></h2>
+<p>It is possible to associate a Python module with an OWL ontology. When Owlready loads the ontology,
+it will automatically import the Python module.
+This is done with the &#8216;python_module&#8217; annotation, which should be set on the ontology itself.
+The value should be the name of your Python module, <em>e.g.</em> &#8216;my_package.my_module&#8217;.
+This annotation can be set with editor like Protégé, after importing the &#8216;owlready_ontology.owl&#8217; ontology:</p>
+<div class="figure">
+<img alt="_images/protege_python_module_annotation.png" src="_images/protege_python_module_annotation.png" />
+</div>
+<p>The Python module can countain Class and Properties definitions, and methods.
+However, it does not need to include all the is-a relations, domain, range,...: any such relation
+defined in OWL does not need to be specified in Python. Therefore, if your Class hierarchy is
+defined in OWL, you can create all Classes as child of Thing.</p>
+<p>For example, in file &#8216;my_python_module.py&#8217;:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">owlready</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">onto</span> <span class="o">=</span> <span class="n">Ontology</span><span class="p">(</span><span class="s2">&quot;http://test.org/onto.owl&quot;</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Drug</span><span class="p">(</span><span class="n">GeneratedName</span><span class="p">,</span> <span class="n">Thing</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">generate_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">return</span> <span class="s2">&quot;drug_with_</span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="s2">&quot;_and_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">ai</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">ai</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">active_principles</span><span class="p">))</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">has_for_active_principle</span><span class="p">(</span><span class="n">Property</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+</pre></div>
+</div>
+<p>And then, in OWL file &#8216;onto.owl&#8217;, you can define:</p>
+<blockquote>
+<div><ul class="simple">
+<li>The &#8216;python_module&#8217; annotation (value: &#8216;my_python_module&#8217;)</li>
+<li>The &#8216;has_for_active_principle&#8217; Property with its domain and range</li>
+<li>The &#8216;ActivePrinciple&#8217; Class (ommitted above &#8211; not needed)</li>
+</ul>
+</div></blockquote>
+<p>In this way, Onotopy allows you to take the best of Python and OWL!</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Mixing Python and OWL</a><ul>
+<li><a class="reference internal" href="#adding-python-methods-to-an-owl-class">Adding Python methods to an OWL Class</a></li>
+<li><a class="reference internal" href="#generating-instance-names">Generating Instance names</a></li>
+<li><a class="reference internal" href="#forward-declarations">Forward declarations</a></li>
+<li><a class="reference internal" href="#associating-a-python-module-to-an-owl-ontology">Associating a Python module to an OWL ontology</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="disjoint.html"
+                        title="previous chapter">Disjointness and open world assumption</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="reasoning.html"
+                        title="next chapter">Reasoning</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="reasoning.html" title="Reasoning"
+             >next</a></li>
+        <li class="right" >
+          <a href="disjoint.html" title="Disjointness and open world assumption"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Owlready 0.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2015, Jean-Baptiste LAMY.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
+  </body>
+</html>

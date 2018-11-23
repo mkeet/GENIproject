@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Keys and indexes &#8212; Owlready 0.3 documentation</title>
+    
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="Owlready 0.3 documentation" href="index.html" />
+    <link rel="next" title="Editing Instances with EditObj3 dialog box generator" href="editobj.html" />
+    <link rel="prev" title="Annotations" href="annotations.html" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="editobj.html" title="Editing Instances with EditObj3 dialog box generator"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="annotations.html" title="Annotations"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Owlready 0.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="keys-and-indexes">
+<h1>Keys and indexes<a class="headerlink" href="#keys-and-indexes" title="Permalink to this headline">¶</a></h1>
+<p>A Key is Property that acts as a &#8216;key&#8217; (like &#8216;primary key&#8217; in database) for a given Class of Individuals.</p>
+<p>When a Key is defined in an ontology, Owlready automatically creates an index for that Key, using a Python
+dict.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This feature corresponds to the &#8216;target for key&#8217; attribute in Protégé.
+Protégé displays it the the Class tab while Owlready associate indexes to Propeties for optimization purpose.</p>
+</div>
+<div class="section" id="creating-an-index">
+<h2>Creating an index<a class="headerlink" href="#creating-an-index" title="Permalink to this headline">¶</a></h2>
+<p>An indexing key is created with the .create_index() method of a Property. It takes a single parameter,
+the domain Class that are indexed.</p>
+<p>In the example below, Drug are identified by their CIP codes (a standard drug presentation code in France):</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">owlready</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">onto</span> <span class="o">=</span> <span class="n">Ontology</span><span class="p">(</span><span class="s2">&quot;http://test.org/onto.owl&quot;</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Drug</span><span class="p">(</span><span class="n">Thing</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="k">def</span> <span class="nf">take</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I took a drug&quot;</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">has_for_cip</span><span class="p">(</span><span class="n">FunctionalProperty</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="n">domain</span>   <span class="o">=</span> <span class="p">[</span><span class="n">Drug</span><span class="p">]</span>
+<span class="gp">... </span>    <span class="nb">range</span>    <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ANNOTATIONS</span><span class="p">[</span><span class="n">has_for_cip</span><span class="p">][</span><span class="s2">&quot;python_name&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;cip&quot;</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">has_for_cip</span><span class="o">.</span><span class="n">create_index</span><span class="p">(</span><span class="n">Drug</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drug1</span> <span class="o">=</span> <span class="n">Drug</span><span class="p">(</span><span class="s2">&quot;drug1&quot;</span><span class="p">,</span> <span class="n">cip</span> <span class="o">=</span> <span class="mi">2166868</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drug2</span> <span class="o">=</span> <span class="n">Drug</span><span class="p">(</span><span class="s2">&quot;drug2&quot;</span><span class="p">,</span> <span class="n">cip</span> <span class="o">=</span> <span class="mi">4166507</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">drug3</span> <span class="o">=</span> <span class="n">Drug</span><span class="p">(</span><span class="s2">&quot;drug3&quot;</span><span class="p">,</span> <span class="n">cip</span> <span class="o">=</span> <span class="mi">3698604</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-the-index">
+<h2>Using the index<a class="headerlink" href="#using-the-index" title="Permalink to this headline">¶</a></h2>
+<p>The .indexes dict attribute of the Property can be use to access to the indexes Instances.
+The first dict key is the domain Class indexed, and the second one is the value.</p>
+<p>For example to get the Drug of CIP code 4166507:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">has_for_cip</span><span class="o">.</span><span class="n">indexes</span><span class="p">[</span><span class="n">Drug</span><span class="p">][</span><span class="mi">4166507</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The index can be created before or after creating the Instances,
+and it is automatically updated if the values of the Property change.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Keys and indexes</a><ul>
+<li><a class="reference internal" href="#creating-an-index">Creating an index</a></li>
+<li><a class="reference internal" href="#using-the-index">Using the index</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="annotations.html"
+                        title="previous chapter">Annotations</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="editobj.html"
+                        title="next chapter">Editing Instances with EditObj3 dialog box generator</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="editobj.html" title="Editing Instances with EditObj3 dialog box generator"
+             >next</a></li>
+        <li class="right" >
+          <a href="annotations.html" title="Annotations"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Owlready 0.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2015, Jean-Baptiste LAMY.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
+  </body>
+</html>

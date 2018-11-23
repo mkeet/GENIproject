@@ -1,0 +1,590 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#"
+     xml:base="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#dla -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#dla"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#enza -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#enza"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#feza -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#feza"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#fundisa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#fundisa"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#fundiswa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#fundiswa"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#phuza -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#phuza"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#yawufeza -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#yawufeza"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#UMphathi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#UMphathi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umsebenzi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#i-apula -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#i-apula"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ibhotela -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ibhotela">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ushizi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ibhubesi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ibhubesi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isilwane"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#dla"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#impala"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#indlovu"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ifoni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ifoni"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ihebhivo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ihebhivo">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ikhanivo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ihebhu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ihebhu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umuthi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ihlamvana -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ihlamvana"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ikhambi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ikhambi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umuthi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ikhanivo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ikhanivo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#imifino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#imifino">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#inyama"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#impala -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#impala">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isilwane"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#indebe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#indebe">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ingilazi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#indlovu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#indlovu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isilwane"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#dla"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ihlamvana"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#indlu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#indlu">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umjondolo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#indlulamithi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#indlulamithi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isilwane"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#dla"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ihlamvana"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#indoda -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#indoda">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umfazi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ingilazi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ingilazi"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ingwe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ingwe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isilwane"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#dla"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#i-apula"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#inja -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#inja">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isilwane"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#inkawu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#inkawu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isilwane"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#dla"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isithelo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#inyama -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#inyama">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umfino"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isidlanyama -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isidlanyama">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isidlazitshalo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isidlazitshalo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isidlazitshalo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isifundo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isifundo">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#fundiswa"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#uSolwazi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isifundo_sezibalo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isifundo_sezibalo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isifundo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isihlahla -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isihlahla">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umuthi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isihlalo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isihlalo">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#itafula"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isilwane -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isilwane"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isipuni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isipuni">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umfoloko"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isithelo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isithelo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#itafula -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#itafula"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#okubomvu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#okubomvu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umbala"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#uSolwazi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#uSolwazi">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#fundisa"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isifundo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ubabekazi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ubabekazi">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umalume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ugogo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ugogo">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#dla"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#i-apula"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#uketshezi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#uketshezi"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ukubhukuda -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ukubhukuda">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umdlalo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ukugijima -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ukugijima">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ukuhlala"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ukuhlala -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ukuhlala"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ukusebenza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ukusebenza">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#yawufeza"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umsebenzi_onqunyiwe"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umakhalekhukhwini -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umakhalekhukhwini">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ifoni"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umalume -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umalume"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umbala -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umbala"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umdlalo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umdlalo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umfazi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umfazi"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umfino -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umfino"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umfoloko -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umfoloko"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umfula -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umfula">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umsele"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umfundi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umfundi"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umfundi_ongenaziqu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umfundi_ongenaziqu">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umfundi"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#enza"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isifundo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umjondolo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umjondolo"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umsebenzi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umsebenzi"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umsebenzi_onqunyiwe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umsebenzi_onqunyiwe"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umsele -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umsele"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umuntu -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umuntu">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#phuza"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#uketshezi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#dla"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#isithelo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#feza"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umsebenzi_onqunyiwe"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umuthi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#umuthi"/>
+    
+
+
+    <!-- http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ushizi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/mariakeet/ontologies/2016/10/untitled-ontology-315#ushizi"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

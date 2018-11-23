@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to Owlready’s documentation! &#8212; Owlready 0.3 documentation</title>
+    
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="Owlready 0.3 documentation" href="#" />
+    <link rel="next" title="Introduction" href="intro.html" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="intro.html" title="Introduction"
+             accesskey="N">next</a></li>
+        <li class="nav-item nav-item-0"><a href="#">Owlready 0.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-owlready-s-documentation">
+<h1>Welcome to Owlready&#8217;s documentation!<a class="headerlink" href="#welcome-to-owlready-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Owlready is a module for ontology-oriented programming in Python: load OWL 2.0 ontologies
+as Python objects, modify them, save to OWL XML, and perform reasoning via HermiT
+(included). Owlready allows a transparent access to OWL ontologies (contrary
+to usual Java-based API).</p>
+<p>Owlready has been created at the LIMICS reseach lab,
+University Paris 13, Sorbonne Paris Cité, INSERM UMRS 1142, Paris 6 University, by
+Jean-Baptiste Lamy. It was developed during the VIIIP research project funded by ANSM, the French Drug Agency;
+this is why most examples in this documentation relate to drug ;).</p>
+<p>Owlready is available under the GNU LGPL licence v3.</p>
+<div class="section" id="table-of-content">
+<h2>Table of content<a class="headerlink" href="#table-of-content" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#short-example-what-can-i-do-with-owlready">Short example: What can I do with Owlready?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#contact-and-links">Contact and links</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="onto.html">Managing ontologies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="onto.html#creating-an-ontology">Creating an ontology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onto.html#loading-an-ontology-from-owl">Loading an ontology from OWL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onto.html#accessing-to-the-content-of-an-ontology">Accessing to the content of an ontology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onto.html#importing-other-ontologies">Importing other ontologies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="onto.html#saving-an-ontology-to-an-owl-file">Saving an ontology to an OWL file</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class.html">Classes and Instances (Individuals)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="class.html#creating-a-class">Creating a Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class.html#creating-subclasses">Creating subclasses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class.html#creating-classes-dynamically">Creating classes dynamically</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class.html#creating-equivalent-classes">Creating equivalent classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class.html#creating-instances">Creating Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="class.html#mutli-class-instances">Mutli-Class Instances</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="properties.html">Properties</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="properties.html#creating-a-new-class-of-property">Creating a new class of property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="properties.html#creating-a-relation">Creating a relation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="properties.html#data-property">Data Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="properties.html#inverse-properties">Inverse properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="properties.html#functional-and-inverse-functional-properties">Functional and Inverse Functional properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="properties.html#creating-a-subproperty">Creating a subproperty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="properties.html#associating-python-alias-name-to-properties">Associating Python alias name to Properties</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="restriction.html">Restrictions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="restriction.html#restrictions-on-a-property">Restrictions on a Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restriction.html#class-operators">Class operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="restriction.html#one-of-constructs">One-Of constructs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="disjoint.html">Disjointness and open world assumption</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="disjoint.html#disjoint-classes">Disjoint Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disjoint.html#disjoint-properties">Disjoint Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disjoint.html#distinct-instances">Distinct Instances</a></li>
+<li class="toctree-l2"><a class="reference internal" href="disjoint.html#closing-instances">Closing Instances</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mixing_python_owl.html">Mixing Python and OWL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mixing_python_owl.html#adding-python-methods-to-an-owl-class">Adding Python methods to an OWL Class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mixing_python_owl.html#generating-instance-names">Generating Instance names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mixing_python_owl.html#forward-declarations">Forward declarations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mixing_python_owl.html#associating-a-python-module-to-an-owl-ontology">Associating a Python module to an OWL ontology</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reasoning.html">Reasoning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reasoning.html#setting-up-everything">Setting up everything</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reasoning.html#running-the-reasoner">Running the reasoner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reasoning.html#results-of-the-automatic-classification">Results of the automatic classification</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="annotations.html">Annotations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="annotations.html#adding-an-annotation">Adding an annotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="annotations.html#querying-annotations">Querying annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="annotations.html#iterating-through-annotations">Iterating through annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="annotations.html#deleting-annotations">Deleting annotations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="annotations.html#creating-a-new-class-of-annotation">Creating a new class of annotation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="keys_and_indexes.html">Keys and indexes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="keys_and_indexes.html#creating-an-index">Creating an index</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keys_and_indexes.html#using-the-index">Using the index</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="editobj.html">Editing Instances with EditObj3 dialog box generator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="editobj.html#generating-a-dialog-box">Generating a dialog box</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editobj.html#ordering-the-instance-s-properties">Ordering the Instance&#8217;s Properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editobj.html#html-output">HTML output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="limitations.html">Limitations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="limitations.html#current-limits">Current limits</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to Owlready&#8217;s documentation!</a><ul>
+<li><a class="reference internal" href="#table-of-content">Table of content</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="intro.html"
+                        title="next chapter">Introduction</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="intro.html" title="Introduction"
+             >next</a></li>
+        <li class="nav-item nav-item-0"><a href="#">Owlready 0.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2015, Jean-Baptiste LAMY.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
+  </body>
+</html>

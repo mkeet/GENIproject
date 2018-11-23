@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Restrictions &#8212; Owlready 0.3 documentation</title>
+    
+    <link rel="stylesheet" href="_static/pyramid.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.3',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="Owlready 0.3 documentation" href="index.html" />
+    <link rel="next" title="Disjointness and open world assumption" href="disjoint.html" />
+    <link rel="prev" title="Properties" href="properties.html" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Neuton&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nobile:regular,italic,bold,bolditalic&amp;subset=latin" type="text/css" media="screen" charset="utf-8" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="_static/ie6.css" type="text/css" media="screen" charset="utf-8" />
+<![endif]-->
+
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="disjoint.html" title="Disjointness and open world assumption"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="properties.html" title="Properties"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Owlready 0.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="restrictions">
+<h1>Restrictions<a class="headerlink" href="#restrictions" title="Permalink to this headline">¶</a></h1>
+<p>Restrictions are special type of Classes in ontology.</p>
+<div class="section" id="restrictions-on-a-property">
+<h2>Restrictions on a Property<a class="headerlink" href="#restrictions-on-a-property" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">owlready</span> <span class="k">import</span> <span class="o">*</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">onto</span> <span class="o">=</span> <span class="n">Ontology</span><span class="p">(</span><span class="s2">&quot;http://test.org/onto.owl&quot;</span><span class="p">)</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Drug</span><span class="p">(</span><span class="n">Thing</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">ActivePrinciple</span><span class="p">(</span><span class="n">Thing</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">has_for_active_principle</span><span class="p">(</span><span class="n">Property</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+<span class="gp">... </span>    <span class="n">domain</span>   <span class="o">=</span> <span class="p">[</span><span class="n">Drug</span><span class="p">]</span>
+<span class="gp">... </span>    <span class="nb">range</span>    <span class="o">=</span> <span class="p">[</span><span class="n">ActivePrinciple</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>For example, a Placebo is a Drug with no Active Principle:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Placebo</span><span class="p">(</span><span class="n">Drug</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">equivalent_to</span> <span class="o">=</span> <span class="p">[</span><span class="n">Drug</span> <span class="o">&amp;</span> <span class="n">NOT</span><span class="p">(</span><span class="n">has_for_active_principle</span><span class="p">(</span><span class="n">SOME</span><span class="p">,</span> <span class="n">ActivePrinciple</span><span class="p">))]</span>
+</pre></div>
+</div>
+<p>In the example above, &#8216;has_for_active_principle(SOME, ActivePrinciple)&#8217; is the Class of all
+objects that have at least one Active Principle. The NOT() function returns the negation of a Class.
+The &amp; operator returns the intersection of two Classes.</p>
+<p>Another example: an Association Drug is a Drug that associates two or more Active Principle:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">DrugAssociation</span><span class="p">(</span><span class="n">Drug</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">equivalent_to</span> <span class="o">=</span> <span class="p">[</span><span class="n">Drug</span> <span class="o">&amp;</span> <span class="n">has_for_active_principle</span><span class="p">(</span><span class="n">MIN</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">ActivePrinciple</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>Owlready provides the following types of restrictions (they have the same names than in Protégé):</p>
+<blockquote>
+<div><ul class="simple">
+<li>some : property(SOME, Range Class)</li>
+<li>only : property(ONLY, Range Class)</li>
+<li>min : property(MIN, cardinality, Range Class)</li>
+<li>max : property(MAX, cardinality, Range Class)</li>
+<li>exactly : property(EXACTLY, cardinality, Range Class)</li>
+<li>value : property(VALUE, Range Instance)</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="class-operators">
+<h2>Class operators<a class="headerlink" href="#class-operators" title="Permalink to this headline">¶</a></h2>
+<p>Owlready provides the following operators between Classes (normal Classes but also restrictions):</p>
+<blockquote>
+<div><ul>
+<li><p class="first">&amp; : and operator (intersection). For example: Class1 &amp; Class2</p>
+</li>
+<li><div class="first line-block">
+<div class="line">: or operator (union). For example: Class1 | Class2</div>
+</div>
+</li>
+<li><p class="first">NOT() : not operator (negation). For example: NOT(Class1)</p>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="one-of-constructs">
+<h2>One-Of constructs<a class="headerlink" href="#one-of-constructs" title="Permalink to this headline">¶</a></h2>
+<p>In ontologies, a &#8216;One Of&#8217; statement is used for defining a Class by extension, <em>i.e.</em> by listing its Instances
+rather than by defining its properties.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">DrugForm</span><span class="p">(</span><span class="n">Thing</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">ontology</span> <span class="o">=</span> <span class="n">onto</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tablet</span>     <span class="o">=</span> <span class="n">DrugForm</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">capsule</span>    <span class="o">=</span> <span class="n">DrugForm</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">injectable</span> <span class="o">=</span> <span class="n">DrugForm</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pomade</span>     <span class="o">=</span> <span class="n">DrugForm</span><span class="p">()</span>
+
+<span class="go"># Assert that there is only four drug forms possible</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DrugForm</span><span class="o">.</span><span class="n">is_a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">one_of</span><span class="p">(</span><span class="n">tablet</span><span class="p">,</span> <span class="n">capsule</span><span class="p">,</span> <span class="n">injectable</span><span class="p">,</span> <span class="n">pomade</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Restrictions</a><ul>
+<li><a class="reference internal" href="#restrictions-on-a-property">Restrictions on a Property</a></li>
+<li><a class="reference internal" href="#class-operators">Class operators</a></li>
+<li><a class="reference internal" href="#one-of-constructs">One-Of constructs</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="properties.html"
+                        title="previous chapter">Properties</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="disjoint.html"
+                        title="next chapter">Disjointness and open world assumption</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="disjoint.html" title="Disjointness and open world assumption"
+             >next</a></li>
+        <li class="right" >
+          <a href="properties.html" title="Properties"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Owlready 0.3 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2015, Jean-Baptiste LAMY.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
+  </body>
+</html>
